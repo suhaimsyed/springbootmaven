@@ -137,10 +137,10 @@
 
 3.  Run the below commands to build a docker image
    ``` 
-        ./mvnw package && java -jar target/gs-spring-boot-docker-0.1.0.jar
+        ./mvnw package && java -jar target/springbootdemo-0.0.1-SNAPSHOT
         ./mvnw install dockerfile:build
    ``` 
-    
+        
 4. Ensure you have logged into docker
    ``` 
         docker login
