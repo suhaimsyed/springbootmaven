@@ -70,9 +70,10 @@
      ```
     @Bean
     ApplicationRunner init(CartService cartService , AddressService addressService,StoreService storeService) {
-     ```    
-    
-    Create new APIs to 
+     
+    ```    
+   
+  Create new APIs to 
     1. Get stores
     2. Create a store 
     3. Create a new cart 
