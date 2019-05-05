@@ -72,12 +72,12 @@
     ApplicationRunner init(CartService cartService , AddressService addressService,StoreService storeService) {
      
     ```    
-   
-  Create new APIs to 
-    1. Get stores
-    2. Create a store 
-    3. Create a new cart 
-    4. Create a entry 
-    5. View entry 
-    6. Get address 
-    7. Create address
+ 
+ Create new APIs to 
+ 1. Get stores
+ 2. Create a store 
+ 3. Create a new cart 
+ 4. Create a entry 
+ 5. View entry 
+ 6. Get address 
+ 7. Create address
