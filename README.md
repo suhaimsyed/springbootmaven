@@ -39,7 +39,7 @@
  
     ```
     @Service
-    public class AddressService {
+    public class StoreService {
 
     private final StoreRepository storeRepository;
 
