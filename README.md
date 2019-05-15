@@ -41,9 +41,11 @@
     @Service
     public class StoreService {
 
+    
     private final StoreRepository storeRepository;
 
-    public StoreRepository(StoreRepository storeRepository) {
+    @Autowired  
+    public StoreService(StoreRepository storeRepository) {
        this.storeRepository = storeRepository;
     }
 
@@ -55,7 +57,7 @@
         return storeRepository.findById(id);
     }
 
-    public Store saveAddress(Store store) {
+    public Store saveStore(Store store) {
         return storeRepository.save(store);
     }
     ```
