@@ -2,10 +2,12 @@
 
 1. Navigate to the project folder and perform the below actions
 
+ ```
     brew install maven
     mvn install
     mvn spring-boot:run
-    
+ ```
+ 
 2. Access http://localhost:8080/api/carts
 
 3. Create a new Store Entity
