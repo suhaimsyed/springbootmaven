@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  demospring-docker-compose-app-container:
+    image: realstore/springbootdemo:latest
+    volumes:
+      - /data/demospring-docker-compose-app
+    ports:
+      - "8082:8080"
