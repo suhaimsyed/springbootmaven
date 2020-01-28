@@ -1,9 +1,7 @@
 package com.demo.spring.demo.service;
 
 import com.demo.spring.demo.beans.Address;
-import com.demo.spring.demo.beans.Cart;
 import com.demo.spring.demo.repository.AddressRepository;
-import com.demo.spring.demo.repository.CartRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

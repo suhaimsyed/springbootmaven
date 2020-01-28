@@ -4,6 +4,7 @@ import com.demo.spring.demo.beans.Address;
 import com.demo.spring.demo.beans.Cart;
 import com.demo.spring.demo.beans.Entry;
 import com.demo.spring.demo.service.AddressService;
+import com.demo.spring.demo.service.CartEntryService;
 import com.demo.spring.demo.service.CartService;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
@@ -27,7 +28,7 @@ public class DemoApplication {
     }
 
     @Bean
-    ApplicationRunner init(CartService cartService , AddressService addressService) {
+    ApplicationRunner init(CartService cartService , AddressService addressService, CartEntryService cartEntryService) {
         Cart cart1 = new Cart();
         cart1.setCode("cart-1234");
         cart1.setTotal(new BigDecimal(50));
@@ -60,7 +61,7 @@ public class DemoApplication {
 
 
         Cart cart2 = new Cart();
-        cart2.setCode("cart-1234");
+        cart2.setCode("cart-12344");
         cart2.setTotal(new BigDecimal(25));
         cart2.setSubtotal(new BigDecimal(25));
         cart2.setTotalTax(new BigDecimal(5));
@@ -93,10 +94,10 @@ public class DemoApplication {
         addressService.saveAddress(address1);
         addressService.saveAddress(address2);
 
-        cartService.saveCartEntry(entry1);
-        cartService.saveCartEntry(entry2);
-        cartService.saveCartEntry(entry3);
-        cartService.saveCartEntry(entry4);
+        cartEntryService.saveCartEntry(entry1);
+        cartEntryService.saveCartEntry(entry2);
+        cartEntryService.saveCartEntry(entry3);
+        cartEntryService.saveCartEntry(entry4);
 
 
         cart1.setEntriesList(Arrays.asList(entry1,entry2));
@@ -112,10 +113,10 @@ public class DemoApplication {
         entry4.setCart(cart2);
 
 
-        cartService.saveCartEntry(entry1);
-        cartService.saveCartEntry(entry2);
-        cartService.saveCartEntry(entry3);
-        cartService.saveCartEntry(entry4);
+        cartEntryService.saveCartEntry(entry1);
+        cartEntryService.saveCartEntry(entry2);
+        cartEntryService.saveCartEntry(entry3);
+        cartEntryService.saveCartEntry(entry4);
 
         return args ->  cartService.getCarts().forEach(System.out::println);
     }
